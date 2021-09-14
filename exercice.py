@@ -39,9 +39,7 @@ def get_nb_char(string: str, char: str) -> int:
 def get_nb_words(sentence: str) -> int:
     nb_de_mots=1
     for i in range(len(sentence)) :
-        if 65<=ord(sentence[i])<=90 or 97<=ord(sentence[i])<=122 :
-            continue
-        else:
+        if sentence[i]==" " :
             nb_de_mots +=1
     return nb_de_mots
 
