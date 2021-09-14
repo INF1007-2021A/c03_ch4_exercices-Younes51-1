@@ -3,23 +3,47 @@
 
 
 def is_even_len(string: str) -> bool:
-    return False
+    nb_de_caractere=len(string)
+    if nb_de_caractere % 2==0 :
+         parity=True
+    else :
+         parity=False
+    return parity
 
 
 def remove_third_char(string: str) -> str:
-    return ""
+    nouveau =""
+    for i in range(len(string)):
+        if i!=2 :
+         nouveau += string[i]
+    return nouveau
 
 
 def replace_char(string: str, old_char: str, new_char: str) -> str:
-    return ""
-
+   nouveau =""
+   for i in range(len(string)) :
+       if old_char==string[i] :
+        nouveau += new_char
+       else:
+        nouveau += string[i]
+   return nouveau
 
 def get_nb_char(string: str, char: str) -> int:
-    return 0
+    nb_d_occurence=0
+    for i in range(len(string)) :
+        if char== string [i] :
+            nb_d_occurence +=1
+    return nb_d_occurence
 
 
 def get_nb_words(sentence: str) -> int:
-    return 0
+    nb_de_mots=1
+    for i in range(len(sentence)) :
+        if 65<=ord(sentence[i])<=90 or 97<=ord(sentence[i])<=122 :
+            continue
+        else:
+            nb_de_mots +=1
+    return nb_de_mots
 
 
 def main() -> None:

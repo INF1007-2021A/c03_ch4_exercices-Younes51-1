@@ -40,7 +40,7 @@ class TestExercice(unittest.TestCase):
             ("01234", "0", "a")
         ]
 
-        output = [exercice.replace_char(v[0], v[1], v[2]) for v in values]
+        output = [exercice.replace_char(v) for v in values]
         answer = [v[0].replace(v[1], v[2]) for v in values]
 
         self.assertListEqual(
