@@ -20,18 +20,18 @@ def remove_third_char(string: str) -> str:
 
 
 def replace_char(string: str, old_char: str, new_char: str) -> str:
-   nouveau =""
+   resultat =""
    for i in range(len(string)) :
-       if old_char==string[i] :
-        nouveau += new_char
-       else:
-        nouveau += string[i]
-   return nouveau
+        if string[i]==old_char :
+            resultat += new_char
+            continue
+        resultat += string[i]
+   return resultat
 
 def get_nb_char(string: str, char: str) -> int:
     nb_d_occurence=0
     for i in range(len(string)) :
-        if char== string [i] :
+        if char == string [i] :
             nb_d_occurence +=1
     return nb_d_occurence
 
@@ -39,7 +39,7 @@ def get_nb_char(string: str, char: str) -> int:
 def get_nb_words(sentence: str) -> int:
     nb_de_mots=1
     for i in range(len(sentence)) :
-        if sentence[i]==" " :
+        if sentence[i] ==" " :
             nb_de_mots +=1
     return nb_de_mots
 
